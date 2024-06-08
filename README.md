@@ -18,14 +18,14 @@ This project is a RESTful API application that allows admins or cashiers to mana
 
 This table will store information about all users.
 
-- `id` (Primary Key): ID pengguna.
-- `username`: Nama pengguna (username).
-- `password`: Kata sandi pengguna (harus di-hash).
-- `name`: Nama lengkap pengguna (opsional).
-- `address`: Alamat pengguna (opsional).
-- `phone`: Nomor telepon pengguna (opsional).
-- `nik`: Nomor Induk Kependudukan pengguna (opsional).
-- `role_id` (Foreign Key ke Tabel Roles): Peran (role) pengguna.
+- `id` (Primary Key): User ID.
+- `username`: Username.
+- `password`: User password (must be hashed).
+- `name`: User's full name (optional).
+- `address`: User address (optional).
+- `phone`: User phone number (optional).
+- `nik`: User's Population Identification Number (optional).
+- `role_id` (Foreign Key to the Roles Table): User role.
 
 ### Roles Table
 
@@ -63,10 +63,6 @@ This table will record item details in each transaction.
 - `quantity`: Number of items purchased.
 - `unit_price`: Price per unit of the item at the time of transaction.
 
-## Testing E2E
-
-The project is equipped with end-to-end (E2E) testing that checks authentication with tokens. This test ensures that the API can only be accessed by authorized users with valid tokens. This helps protect application security from unauthorized access.
-
 ## How to Run the Project
 
 To run this project, follow these steps:
@@ -92,7 +88,7 @@ To run this project, follow these steps:
 
    ```
 
-4. Konfigurasi Database:
+4. Database configuration:
 
    Make sure you have set up a MySQL database and configured your database connection in the configuration file.
    Run database migration to create the required tables:
@@ -102,7 +98,7 @@ To run this project, follow these steps:
 
    ```
 
-5. Jalankan proyek:
+5. Run the project:
 
    ```bash
    npm start
@@ -117,10 +113,13 @@ API documentation is available in Postman format. You can import the Postman JSO
 
 https://documenter.getpostman.com/view/24200467/2sA3XJk4ri
 
-## Contribution
+## Contributing
 
-We welcome contributions from the community. If you would like to contribute to this project, please go to "Issues" to find the work that needs to be done or create a "Pull Request" with your proposed changes.
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for more details.
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
